@@ -56,9 +56,13 @@ const main = async () => {
 		} as any)
 	);
 
-	app.get('/hello3', (_, res) => {
-		res.send('hello 3');
+	app.get('/hello1', (_, res) => {
+		res.send('hello 1');
 	});
+	app.get('/hello2', (_, res) => {
+		res.send('hello 2');
+	});
+
 	apolloServer.applyMiddleware({ app });
 
 	app.listen(4000, () => {
